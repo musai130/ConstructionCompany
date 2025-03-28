@@ -31,7 +31,7 @@ export default async function Login({
     <section className="h-[calc(100vh-57px)] flex justify-center items-center">
       <Card className="mx-auto max-w-sm">
         <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
+          <CardTitle className="text-2xl">Вход</CardTitle>
           <CardDescription>
             Enter your email below to login to your account
           </CardDescription>
@@ -39,7 +39,7 @@ export default async function Login({
         <CardContent className="flex flex-col gap-4">
           <form id="login-form" className="grid gap-4">
             <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">Адрес почты</Label>
               <Input
                 id="email"
                 name="email"
@@ -50,7 +50,7 @@ export default async function Login({
             </div>
             <div className="grid gap-2">
               <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">Пароль</Label>
               </div>
               <Input
                 minLength={6}
@@ -70,9 +70,9 @@ export default async function Login({
             </Button>
           </form>
           <div className="text-center text-sm">
-            Don&apos;t have an account?{" "}
+            Нет аккаунта?{" "}
             <button formAction={signup} form="login-form" className="underline">
-              Sign up
+              Регистрация
             </button>
           </div>
         </CardContent>
