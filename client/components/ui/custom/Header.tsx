@@ -11,33 +11,27 @@ export default async function Header() {
 
   return (
     <header className="sticky top-0 z-10 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-14 items-center justify-between px-4">
+      <div className="container mx-auto flex h-14 items-center justify-between space-x-4 px-4">
         <div className="flex items-center space-x-4">
-          <nav className="flex space-x-1">
-            <Link href="/">
-              <div>
-                <div className="font-bold">техно |</div>
-              </div>
-            </Link>
-            <Link href="/">
-              <div>
-                <div>строй</div>
-              </div>
-            </Link>
-            <Link href="/profile" className="ml-9">
-              Профиль
-            </Link>
+          <Link className="flex items-center space-x-4" href="/">
+            <p className="font-bold">техно</p>
+            <p className="font-bold">|</p>
+            <p>строй</p>
+          </Link>
+          <nav className="pl-6 flex space-x-4">
+            <Link href="/about">О нас</Link>
+            <Link href="/contacts">Контакты</Link>
           </nav>
         </div>
         <div className="flex items-center space-x-2">
           {user ? (
             <form action={signOut} className="flex items-center gap-2">
               <p>{user.email}</p>
-              <Button>Sign Out</Button>
+              <Button>Выйти</Button>
             </form>
           ) : (
             <Button asChild>
-              <Link href="/login">Регистрация</Link>
+              <Link href="/login">Войти</Link>
             </Button>
           )}
         </div>

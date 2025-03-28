@@ -33,7 +33,8 @@ export default async function Login({
         <CardHeader>
           <CardTitle className="text-2xl">Вход</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Введите свой адрес электронной почты ниже, чтобы войти в свою
+            учетную запись
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
@@ -66,7 +67,7 @@ export default async function Login({
               </div>
             )}
             <Button formAction={emailLogin} className="w-full">
-              Login
+              Войти
             </Button>
           </form>
           <div className="text-center text-sm">
@@ -74,6 +75,11 @@ export default async function Login({
             <button formAction={signup} form="login-form" className="underline">
               Регистрация
             </button>
+          </div>
+          <div className="text-center text-sm">
+            <a href="/forgot-password" className="underline">
+              Забыли пароль?
+            </a>
           </div>
         </CardContent>
       </Card>
